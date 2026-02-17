@@ -1,0 +1,38 @@
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+}
+
+.launch {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.tape {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #ffd000 0px,
+      #ffd000 20px,
+      #d40000 20px,
+      #d40000 40px
+    );
+}
+
+.top { top: 0; }
+.bottom { bottom: 0; }
