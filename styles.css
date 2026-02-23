@@ -375,6 +375,7 @@ form input, form textarea{
     width: calc(100% - (var(--pad) * 2));
     max-width: 520px;
     display:none;
+    z-index: 1001;
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
@@ -430,14 +431,22 @@ form input, form textarea{
 .bg-a{ opacity: 1; }
 .bg-b{ opacity: 0; }
 
-/* Put your main site above the side panels */
-.site-header, main, .site-footer{
+/* Put your main site above the side panels.
+   IMPORTANT: keep the header above everything else so the mobile nav
+   dropdown is never hidden behind the hero/content. */
+main, .site-footer{
   position: relative;
   z-index: 1;
 }
 
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 /* Give the centered container breathing room so it never sits on top of the side panels */
-@media (min-width: 980px){
+@media (min-width: 861px){
   /* Fit the content neatly between the side panels without extra inner padding */
   .site-header .container,
   main .container,
@@ -450,9 +459,10 @@ form input, form textarea{
     padding-right: 0;
   }
 }
-/* On phones, hide the side panels for space + performance */
-@media (max-width: 700px){
-  }
+/* Hide the side panels whenever the "two" card grid collapses to one column.
+   This keeps the layout change (cards + side images) in sync. */
+@media (max-width: 860px){
+  .side{ display:none; }
   main .container, .site-header .container, .site-footer .container{
     padding-left: 0;
     padding-right: 0;
