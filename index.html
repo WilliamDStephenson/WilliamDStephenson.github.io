@@ -1,21 +1,226 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Work in Progress</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="tape top"></div>
+  <!-- Favicon -->
+  <link rel="icon" href="favicon_io/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
 
-  <main>
-    <h1>🚧 Site Under Construction 🚧</h1>
-    <p>This website is a work in progress.</p>
-    <p class="launch">Launching: <strong> Q1 2026 </strong></p>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> William Stephenson | Personal Website</title>
+  <meta name="description" content="William Stephenson personal website: mathematics, research, publications and contact" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body id="top">
+
+  <!-- Fixed side background panels (desktop/tablet) -->
+  <div class="side side--left" aria-hidden="true">
+    <div class="bg-layer bg-a"></div>
+    <div class="bg-layer bg-b"></div>
+  </div>
+
+  <div class="side side--right" aria-hidden="true">
+    <div class="bg-layer bg-a"></div>
+    <div class="bg-layer bg-b"></div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Homepage">
+        <span class="brand-mark">WS</span>
+        <span class="brand-text">William Stephenson</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" data-scene="0">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"> PhD Candidate | Mathematics </p>
+          <h1>Hi, I’m <span class="accent">William Stephenson</span>.</h1>
+          <p class="lead">
+            PhD candidate at the University of Ottawa researching stochastic partial differential equations.   
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Contact</a>
+            <a class="btn" href="#publications">Publications</a>
+          </div>
+
+          <!-- 
+          <ul class="social">
+            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></li>
+          </ul>
+          -->
+        </div>
+
+        <div class="hero-card" role="img" aria-label="Profile image placeholder">
+          <div class="avatar"><img class="portrait-img"src="assets/portrait.jpg" alt="Portrait of William"/></div>
+          <div class="hero-meta">
+            <p><a class="underline-link" href="https://www.uottawa.ca/en"><strong>University of Ottawa</strong></a></p>
+            <p><strong>wstephen</strong> (at) <strong>uottawa</strong> (dot) <strong>ca</strong> </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About</h2>
+        </div>
+
+        <div class="cards two">
+          <article class="card">
+            <h3>Bio</h3>
+            <p>
+              My research interests are in probability, differential equations, stochastic processes and combinatorics. Currently, under the supervision of <a class="underline-link" href="https://uniweb.uottawa.ca/sites/Raluca-Balan">Prof. Raluca Balan</a>, I am studying partial differential equations perturbed by L&eacute;vy random noise. Previous to this, during my Masters, I worked on Hamilton decompositions of Cayley graphs with <a class="underline-link" href="https://smp.uq.edu.au/profile/266/barbara-maenhaut">Prof. Barbara Maenhaut</a>. 
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Engagement</h3>
+            <ul class="bullets">
+              <li>Teaching assistant at the University of Queensland's Queensland Mathematics Summer School. (2019)</li>
+              <li>Mentored two undergraduate students on SPDEs for the University of Ottawa's Math Mentorship Program. (2025)<br></li>
+              <li>Guest speaker at the Finger Lakes Probability Seminar, Syracuse University. (2026) </li>
+              <li>Mitacs Globalink Research Project participant, hosted by <a class="underline-link" href="https://sites.bu.edu/gzheng90/">Prof. Guangqu Zheng</a> at Boston University. (2026)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Education</h3>
+            <ul class="bullets">
+              <li><strong>Doctor of Philosophy in Mathematics and Statistics</strong>,<br>University of Ottawa. (2024 - Present)</li>
+              <li><strong>Master of Science in pure mathematics</strong>,<br>University of Queensland. (2022-2023)</li>
+              <li><strong>Bachelor of Mathematics in pure mathematics</strong>,<br>Minor in computer science, University of Queensland.<br>(2018-2021)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Scholarships and Awards</h3>
+            <ul class="bullets">
+              <li>Doctoral admission scholarship. </li>
+              <li>International doctoral scholarship.</li>
+              <li>Mitacs Globalink research award.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="section" id="publications" data-scene="1">
+      <div class="container">
+        <div class="section-head">
+          <h2>Publications</h2>
+        </div>
+
+        <!--
+        <div class="pub-controls">
+          <label class="sr-only" for="pubSearch">Search publications</label>
+          <input id="pubSearch" type="search" placeholder="Search by title, venue, year..." autocomplete="off" />
+
+          <div class="chips" role="group" aria-label="Filter publications">
+            <button class="chip is-active" data-filter="all">All</button>
+            <button class="chip" data-filter="journal">Journal</button>
+            <button class="chip" data-filter="conference">Conference</button>
+            <button class="chip" data-filter="preprint">Preprint</button>
+          </div>
+        </div>
+        -->
+
+        <ol class="pub-list" id="pubList">
+          <li class="pub" data-type="Preprint" data-year="2026">
+            <div class="pub-main">
+              <h3 class="pub-title">Gaussian fluctuations for hyperbolic Anderson model with L&eacute;vy colored noise</h3>
+              <p class="pub-authors">with <a class="underline-link" href="https://uniweb.uottawa.ca/sites/Raluca-Balan">Raluca Balan</a> (2026)</p>
+            </div>
+            <div class="pub-actions">
+              <!--<a class="link" href="#" target="_blank" rel="noopener">arXiv</a>-->
+              <p class="pub-venue"><span class="tag">In preparation</span></p>
+            </div>
+          </li>
+          <li class="pub" data-type="Preprint" data-year="2026">
+            <div class="pub-main">
+              <h3 class="pub-title">Almost sure CLT for hyperbolic Anderson model with L&eacute;vy colored noise</h3>
+              <p class="pub-authors">with <a class="underline-link" href="https://uniweb.uottawa.ca/sites/Raluca-Balan">Raluca Balan</a> and Hanniel Kouam&eacute; (2026)</p>
+            </div>
+            <div class="pub-actions">
+              <!--<a class="link" href="#" target="_blank" rel="noopener">arXiv</a>-->
+              <p class="pub-venue"><span class="tag">In preparation</span></p>
+            </div>
+          </li>
+          <!--<li class="pub" data-type="Preprint" data-year="2026">
+            <div class="pub-main">
+              <h3 class="pub-title">A linear algebra approach to Hamilton decompositions of infinite circulant graphs</h3>
+              <p class="pub-authors">with <a class="underline-link" href="https://smp.uq.edu.au/profile/266/barbara-maenhaut">Barbara Maenhaut</a> (2026)</p>
+            </div>
+            <div class="pub-actions">
+              <a class="link" href="#" target="_blank" rel="noopener">arXiv</a>
+              <p class="pub-venue"><span class="tag">Preprint</span></p>
+            </div>
+          </li>-->
+        <!--    
+        <p class="muted small" id="pubCount" aria-live="polite"></p>
+          -->
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+        </div>
+
+        <article class="card">
+          <h3>Details</h3>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> wstephen (at) uottawa (dot) ca </li>
+            <li><strong>Office:</strong> STM 546 </li>
+            <!--
+            <li><strong>Links:</strong>
+              <a href="#" target="_blank" rel="noopener">Scholar</a>
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+            </li>
+            -->
+          </ul>
+        </article>
+      </div>
+    </section>
   </main>
 
-  <div class="tape bottom"></div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> William Stephenson </p>
+      <a class="link" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
