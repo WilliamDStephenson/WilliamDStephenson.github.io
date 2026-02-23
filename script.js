@@ -85,6 +85,12 @@ applyPubFilters();
 
 // === Side background panels (scroll-driven) ===
 (function initSideScrollBackgrounds(){
+  // On mobile we hide the side panels via CSS; skip all JS work as well so
+  // the background images aren't loaded and no scroll listeners are attached.
+  // Keep this breakpoint aligned with the CSS rule that collapses `.cards.two`
+  // to a single column (max-width: 860px).
+  if (window.matchMedia && window.matchMedia("(max-width: 860px)").matches) return;
+
   const leftA = document.querySelector(".side--left .bg-a");
   const leftB = document.querySelector(".side--left .bg-b");
   const rightA = document.querySelector(".side--right .bg-a");
