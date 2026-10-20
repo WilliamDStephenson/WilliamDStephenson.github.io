@@ -13,6 +13,23 @@
   <title> William Stephenson | Personal Website</title>
   <meta name="description" content="William Stephenson personal website: mathematics, research, publications and contact" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Keep publication links beside the title and authors. */
+    .pub-list > li.pub {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 15rem);
+      align-items: start;
+      column-gap: 1.5rem;
+    }
+    .pub-list > li.pub .pub-main,
+    .pub-list > li.pub .pub-actions { min-width: 0; }
+    .pub-list > li.pub .pub-actions { text-align: right; }
+    .pub-list > li.pub .pub-actions > a { display: inline-block; margin-left: .65rem; }
+    .pub-list > li.pub .pub-venue { overflow-wrap: anywhere; }
+    @media (max-width: 600px) {
+      .pub-list > li.pub { grid-template-columns: minmax(0, 1fr); row-gap: .5rem; }
+    }
+  </style>
 </head>
 
 <body id="top">
